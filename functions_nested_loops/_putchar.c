@@ -1,22 +1,12 @@
-#include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Test la fonction _islower
+ * _putchar - Écrit le caractère c sur la sortie standard
+ * @c: Le caractère à imprimer
  *
- * Return: Toujours 0
+ * Return: 1 en cas de succès, -1 en cas d'erreur
  */
-int main(void)
+int _putchar(char c)
 {
-    char ch = 'a';
-    int result;
-
-    result = _islower(ch);
-    printf("%c est en minuscule: %d\n", ch, result);
-
-    ch = 'Z';
-    result = _islower(ch);
-    printf("%c est en minuscule: %d\n", ch, result);
-
-    return (0);
+    return (write(1, &c, 1));
 }
