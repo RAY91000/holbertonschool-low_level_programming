@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stdio.h>
 
 /**
@@ -8,15 +9,15 @@
  */
 int main(void)
 {
-    char ch = 'a';
-    int result;
+    int r;
 
-    result = _islower(ch);
-    printf("%c est en minuscule: %d\n", ch, result);
-
-    ch = 'Z';
-    result = _islower(ch);
-    printf("%c est en minuscule: %d\n", ch, result);
+    r = _islower('H');
+    _putchar(r + '0');
+    r = _islower('o');
+    _putchar(r + '0');
+    r = _islower(108);
+    _putchar(r + '0');
+    _putchar('\n');
 
     return (0);
 }
