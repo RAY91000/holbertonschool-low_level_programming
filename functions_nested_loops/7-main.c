@@ -9,10 +9,11 @@ int main(void)
 {
     int r;
 
-    print_last_digit(98);
-    print_last_digit(0);
+    r = print_last_digit(98);
+    _putchar('\n'); // Optional: print a newline after the first call
+    r = print_last_digit(0);
+    _putchar('\n'); // Optional: print a newline after the second call
     r = print_last_digit(-1024);
-    _putchar('0' + r);
-    _putchar('\n');
+    _putchar('\n'); // Optional: print a newline after the third call
     return (0);
 }
