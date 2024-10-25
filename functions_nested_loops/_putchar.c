@@ -1,8 +1,8 @@
 #include <unistd.h>
 
 /**
- * _putchar - Écrit le caractère c sur la sortie standard
- * @c: Le caractère à imprimer
+ * _putchar - Affiche le caractère c sur la sortie standard
+ * @c: Le caractère à afficher
  *
  * Return: 1 en cas de succès, -1 en cas d'erreur
  */
