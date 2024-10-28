@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Affiche les nombres de 1 à 100, en remplaçant les multiples de 3 par "Fizz",
+ * main - Affiche les nmbr de 1 à 100, en remplaçant lex de 3 par "Fizz",
  * les multiples de 5 par "Buzz", et les multiples des deux par "FizzBuzz".
  *
  * Return: Toujours 0.
