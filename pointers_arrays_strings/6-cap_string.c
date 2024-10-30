@@ -8,27 +8,31 @@
  */
 char *cap_string(char *s)
 {
-int i = 0;
+    int i = 0;
 
-if (s[i] >= 'a' && s[i] <= 'z')
-s[i] -= 32;
+    // Capitalize the first character if it's a lowercase letter
+    if (s[i] >= 'a' && s[i] <= 'z')
+        s[i] -= 32;
 
-while (s[i])
-{
-if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
-s[i] == ',' || s[i] == ';' || s[i] == '.' ||
-s[i] == '!' || s[i] == '?' || s[i] == '"' ||
-s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
-{
-i++;
-            
- if (s[i] >= 'a' && s[i] <= 'z')
-s[i] -= 32;
-}
-else
-{
-i++;
-}
-}
-return (s);
+    while (s[i])
+    {
+        // Check for word separators
+        if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+            s[i] == ',' || s[i] == ';' || s[i] == '.' ||
+            s[i] == '!' || s[i] == '?' || s[i] == '"' ||
+            s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
+        {
+            // Move to the next character
+            i++;
+
+            // Capitalize the next character if it's a lowercase letter
+            if (s[i] >= 'a' && s[i] <= 'z')
+                s[i] -= 32;
+        }
+        else
+        {
+            i++;
+        }
+    }
+    return (s);
 }
