@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _putchar(char c);
-void print_diagsums(int *a, int size);
+char *_strstr(char *haystack, char *needle);
 
 #endif /* MAIN_H */
