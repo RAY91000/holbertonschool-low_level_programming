@@ -4,19 +4,22 @@
  * _sqrt_recursion - Calcule la racine carrÃ©e naturelle de n
  * @n: Le nombre dont on veut la racine carrÃ©e
  *
- * Return: La racine carrÃ©e naturelle de n, ou - a pas racine carrÃ naturel
+ * Return: La racine carrÃ nature de n, ou -1 si n a pas de racine carrÃ nature
  */
 int _sqrt_recursion(int n)
 
 {
-	static int i = 1;
+	int i = 0;
 
-	if (i * i == n)
-		return (i);
-
-	if (i * i > n)
+	if (n < 0)
 		return (-1);
 
-	i++;
-	return (_sqrt_recursion(n));
+	while (i * i <= n)
+	{
+		if (i * i == n)
+			return (i);
+		i++;
+	}
+
+	return (-1);
 }
