@@ -1,25 +1,26 @@
 #include "main.h"
 
-/**
- * _sqrt_recursion - Calcule la racine carrÃ©e naturelle de n
- * @n: Le nombre dont on veut la racine carrÃ©e
- *
- * Return: La racine carrÃ nature de n, ou -1 si n a pas de racine carrÃ nature
- */
+int square(int num, int root)
+
+{
+if ((root * root) > num)
+{
+return (-1);
+}
+else if ((root * root) == num)
+{
+return (root);
+}
+else
+{
+return (square(num, root + 1));
+}
+}
 int _sqrt_recursion(int n)
 
 {
-	int i = 0;
-
-	if (n < 0)
-		return (-1);
-
-	while (i * i <= n)
-	{
-		if (i * i == n)
-			return (i);
-		i++;
-	}
-
-	return (-1);
+if (n < 0)
+return (-1);
+else
+return (square(n, 0));
 }
