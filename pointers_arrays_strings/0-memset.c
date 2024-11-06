@@ -8,8 +8,8 @@
  *
  * Cette fonction remplit les n premiers byte de la zone mémoire
  * pointée par s avec la valeur de l'octet b.
- * 
- * Return: Un pointeur vers la zone mémoire remplie (s).
+ *
+ * Return: Un pointeur vers la zone mémoire remplie s)
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -17,6 +17,7 @@ char *_memset(char *s, char b, unsigned int n)
 {
 
 	unsigned int i;
+
 	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
