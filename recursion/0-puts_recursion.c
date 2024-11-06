@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts_recursion - Imprime une chaîne de caractères suivie d'un reto a la ligne
+ * _puts_recursion - print une chaîne de caractè suivie d'un reur a ligne
  * @s: Pointeur vers la chaîne de caractèr a imprimer
  *
  * Description: Cette fonction utilise la récursivité pour imprimer chaque
