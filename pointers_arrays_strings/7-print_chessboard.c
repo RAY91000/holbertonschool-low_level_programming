@@ -4,10 +4,10 @@
  * print_chessboard - prints all the pieces of a chessboard
  * @a: the chessboard
  */
-void print_chessboard(char (*a)[8]
+void print_chessboard(char (*a)[8])
 
 {
-int i = 0
+int i = 0;
 int j;
 
 while (i < 0)
