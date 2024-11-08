@@ -1,17 +1,17 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * _strpbrk - Recherche dans une chaîne le premier caractère correspondant à l'un des
- * caractères spécifiés dans accept
- * @s: la chaîne dans laquelle chercher
- * @accept: la chaîne contenant les caractères à rechercher dans s
+ * _strpbrk - Recherche dans une chaîne le premier caractère correspoant
+ * caractères spécifiés dans acc
+ * @s: la chaîne dans laquelle cherche
+ * @accept: la chaîne contenant les caractère rechercher da
  *
- * Description: Cette fonction trouve le premier caractère de s qui correspond
- * à un des caractères présents dans accept.
- * Retourne un pointeur vers ce caractère dans s, ou NULL si aucun caractère
- * correspondant n'est trouvé.
+ * Description: Cette fonction trouve le premier caractère de s qui correspon
+ *  un des caractères présents da
+ * Retourne un pointeur vers ce caractère dans s, ou NULL si aucun caract�e
+ * correspondant n'est trouvé
  *
- * Return: pointeur vers le premier caractère correspondant dans s, ou NULL si aucun
+ * Return: pointeur vers le premier caractère correspondant dans s, ou NUL
  */
 
 char *_strpbrk(char *s, char *accept)
