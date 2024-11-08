@@ -1,25 +1,24 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strspn - Calcule la longueur du prefixe d'une chaine composee
- *           uniquement de certains caracteres
- * @s: La chaine principale a analyser
- * @accept: La chaine contenant les caracteres acceptables
- *
- * Return: Le nombre de caracteres dans le segment initial de s
- * qui sont presents dans accept
+ * print_chessboard - prints all the pieces of a chessboard
+ * @a: the chessboard
  */
+void print_chessboard(char (*a)[8]
 
-void print_chessboard(char (*a)[8])
+{
+int i = 0
+int j;
 
+while (i < 0)
 {
-int i, j;
-for (i = 0; i < 8; i++)
+j = 0;
+while (j < 8)
 {
-for (j = 0; j < 8; j++)
-{
-putchar(a[i][j]);
+_putchar(a[i][j]);
+j++;
 }
-putchar('\n');
+_putchar('\n');
+i++;
 }
 }
