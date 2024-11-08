@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * square - Calcule la racine carree d'un nombre avec une recherche recursive
+ * @num: Le nombre dont on cherche la racine carree
+ * @root: Le candidat actuel pour la racine carree
+ *
+ * Return: La racine carree de num si elle est naturelle, sinon -1
+ */
 
 int square(int num, int root)
 
