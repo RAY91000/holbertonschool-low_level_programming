@@ -1,50 +1,45 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "dog.h"
+#include <stdlib.h>  /* Pour malloc */
+#include <string.h>
 
 /**
- * new_dog - Crée un nouveau chien avec les informations spécifiées
- * @name: Nom du chien
- * @age: Âge du chien
- * @owner: Nom du propriétaire
+ * new_dog - Crée un nouveau chien avec les paramètres donnés
+ * @name: Le nom du chien
+ * @age: L'âge du chien
+ * @owner: Le propriétaire du chien
  *
- * Return: Pointeur vers le nouveau chien, ou NULL en cas d'échec
+ * Return: Pointeur vers le nouveau chien (dog_t), ou NULL si échec
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
-	int name_len, owner_len;
+	dog_t *new_dog;
 
-	if (name == NULL || owner == NULL)
+	/* Allouer de la mémoire pour un nouveau chien */
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 		return (NULL);
 
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
-
-	name_len = strlen(name) + 1; /* +1 pour le caractère nul de fin */
-	owner_len = strlen(owner) + 1; /* +1 pareil */
-
-	dog->name = malloc(name_len);
-	if (dog->name == NULL)
+	/* Allouer et copier le nom du chien */
+	new_dog->name = malloc(sizeof(char) * (strlen(name) + 1));
+	if (new_dog->name == NULL)
 	{
-		free(dog);
+		free(new_dog);
 		return (NULL);
 	}
+	strcpy(new_dog->name, name);
 
-	dog->owner = malloc(owner_len);
-	if (dog->owner == NULL)
+	/* Allouer et copier le nom du propriétaire */
+	new_dog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
+	if (new_dog->owner == NULL)
 	{
-		free(dog->name);
-		free(dog);
+		free(new_dog->name);
+		free(new_dog);
 		return (NULL);
 	}
+	strcpy(new_dog->owner, owner);
 
-	strcpy(dog->name, name);
-	strcpy(dog->owner, owner);
+	/* Initialiser l'âge du chien */
+	new_dog->age = age;
 
-	dog->age = age;
-
-	return (dog);
+	return (new_dog);
 }
