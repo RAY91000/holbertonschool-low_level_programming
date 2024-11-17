@@ -5,7 +5,7 @@
  * print_dog - Affiche les informations d'une structure de type struct dog.
  * @d: Pointeur vers la structure struct dog a afficher
  *
- * Description: Si un élément de la structure est NULL, affich(nil)a la 
+ * Description: Si un élément de la structure est NULL, affich(nil)a 
  * place. Si le pointeur est NULL, n'affiche rien.
  */
 void print_dog(struct dog *d)
