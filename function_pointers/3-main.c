@@ -23,16 +23,10 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	operation = get_op_func(argv[2]);
 
-	if (operation == NULL)
+	if (!operation)
 	{
 		printf("Error\n");
 		exit(99);
-	}
-
-	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
 	}
 
 	result = operation(num1, num2);
