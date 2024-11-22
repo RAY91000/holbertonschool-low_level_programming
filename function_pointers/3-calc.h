@@ -2,10 +2,16 @@
 #define CALC_H
 #include "function_pointers.h"
 
+/**
+ * struct op - Structure pour associer un opératur a une fonct
+ * @op: L'opérateu
+ * @f: La fonction associé
+ */
+
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 
 int op_add(int a, int b);
