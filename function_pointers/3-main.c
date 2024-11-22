@@ -32,14 +32,5 @@ int main(int argc, char *argv[])
 	result = operation(num1, num2);
 	printf("%d\n", result);
 
-	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-	result = operation(num1, num2);
-	printf("%d\n", result);
-
 	return (0);
 }
