@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * get_op_func - Sélec la fonct appropri�e en fonction de l'opéraeur
