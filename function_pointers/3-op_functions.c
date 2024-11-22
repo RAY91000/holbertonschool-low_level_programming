@@ -55,7 +55,7 @@ int op_div(int a, int b)
  * op_mod - Calcule le reste de la division enti√®re de deux entier
  * @a: Dividend
  * @b: Diviseur
- * Return: Le reste de a divis√©par b
+ * Return: Le reste de a divis√ ©par b
  */
 int op_mod(int a, int b)
 {
