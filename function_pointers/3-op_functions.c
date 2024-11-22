@@ -1,10 +1,12 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * op_add - Calcule la somme de deux entiers
- * @a: Premier entier
- * @b: Deuxième entie
- * Return: La somme de a et b
+ * op_add - returns the sum of two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: sum of a and b
  */
 int op_add(int a, int b)
 {
@@ -12,10 +14,10 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - Calcule la différence de deux entier
- * @a: Premier entier
- * @b: Deuxième entie
- * Return: La différence entre a e b
+ * op_sub - returns the difference of two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: difference of a and b
  */
 int op_sub(int a, int b)
 {
@@ -23,10 +25,10 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - Calcule le produit de deux entiers
- * @a: Premier entier
- * @b: Deuxième entie
- * Return: Le produit de a et b
+ * op_mul - returns the product of two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: product of a and b
  */
 int op_mul(int a, int b)
 {
@@ -34,31 +36,33 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - Calcule la division entière de deux entier
- * @a: Dividend
- * @b: Diviseur
- * Return: Le résultat de a divisé par
+ * op_div - returns the result of the division of two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: result of a divided by b
  */
 int op_div(int a, int b)
 {
 	if (b == 0)
 	{
-		return (0);
+		printf("Error\n");
+		exit(100);
 	}
 	return (a / b);
 }
 
 /**
- * op_mod - Calcule le reste de la division entière de deux entier
- * @a: Dividend
- * @b: Diviseur
- * Return: Le reste de a divis� �par b
+ * op_mod - returns the remainder of the division of two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: remainder of a divided by b
  */
 int op_mod(int a, int b)
 {
 	if (b == 0)
 	{
-		return (0);
+		printf("Error\n");
+		exit(100);
 	}
 	return (a % b);
 }
