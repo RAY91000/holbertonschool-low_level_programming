@@ -6,6 +6,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#define BUFFER_SIZE 1024
+void close_file(int fd);
+void error_exit(const char *message, int code, const char *filename);
+
 /**
  * main - Copies the content of a file to another file.
  * @argc: The number of arguments passed.
