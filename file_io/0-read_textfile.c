@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - Reads a text file and prints it to the POSIX standard output.
+ * read_textfile - Reads a text file & prints it to the POSIX standard output.
  * @filename: Pointer to the name of the file.
  * @letters: Number of letters to read and print.
  *
