@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -16,7 +17,6 @@ int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, bytes_read, bytes_written;
 	char buffer[1024];
-	struct stat st;
 
 	if (argc != 3)
 	{
