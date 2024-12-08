@@ -20,12 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	/* Open the file */
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
 
-	/* Allocate buffer for reading */
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
@@ -33,7 +31,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	/* Read the file */
 	bytes_read = read(fd, buffer, letters);
 	if (bytes_read == -1)
 	{
