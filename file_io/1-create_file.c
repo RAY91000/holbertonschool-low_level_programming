@@ -1,9 +1,10 @@
 #include "main.h"
-#include <fcntl.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 /**
- * create_file - Creates a file.
+ * create_file - Creates a file with specific content and permissions.
  * @filename: Pointer to the name of the file to create.
  * @text_content: NULL-terminated string to write to the file.
  *
@@ -11,23 +12,23 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, bytes_written, len = 0;
+	int fd, len = 0;
+	ssize_t bytes_written;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-
-		while (text_content[len] != '\0')
+		while (text_content[len])
 			len++;
 
 		bytes_written = write(fd, text_content, len);
-		if (bytes_written == -1 || bytes_written != len)
+		if (bytes_written == -1)
 		{
 			close(fd);
 			return (-1);
@@ -37,4 +38,3 @@ int create_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
-
